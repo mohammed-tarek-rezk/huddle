@@ -1,0 +1,33 @@
+// for media 
+@use './../variables/variables' as *;
+@mixin media($key){
+    @media (#{$key}){
+        @content;
+    }
+        
+}
+@mixin transition{
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+}
+@mixin dependant {
+    @media  screen and (max-width: $small-screen) {
+        padding: 15px 40px;
+        border-radius: 25px / 50%;
+        -webkit-border-radius: 25px / 50%;
+        -moz-border-radius: 25px / 50%;
+        -ms-border-radius: 25px / 50%;
+        -o-border-radius: 25px / 50%;
+}
+    @media  screen and (min-width: $small-screen) {
+        padding: 20px 80px;
+        border-radius: 30px / 50%;
+        -webkit-border-radius: 30px / 50%;
+        -moz-border-radius: 30px / 50%;
+        -ms-border-radius: 30px / 50%;
+        -o-border-radius: 30px / 50%;
+    }
+}

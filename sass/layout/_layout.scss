@@ -1,0 +1,16 @@
+@use './../variables/variables' as *;
+@use './../mixin/mixin.scss' as *;
+.container{
+    padding: 0px 15px;
+    margin: auto;
+    @media(min-width: $small-screen){
+        width: $small-con;
+    }
+    @media(min-width: $medium-screen){
+        width: $medium-con;
+    }
+    @media(min-width: $large-screen){
+        width: $large-con;
+    }
+}
+
